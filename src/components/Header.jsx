@@ -14,10 +14,10 @@ export function Header() {
 
                     {/* Login, Cadastro e WhatsApp */}
                     <div className="flex max-w-xl justify-between container items-center">
-                        <Link href="/buy" className="bg-white-400 text-black font-bold text-base hover:text-blue-700 py-2 ms-72 px-4 rounded-lg">
+                        <Link href="/login" className="bg-white-400 text-black font-bold text-base hover:text-blue-700 py-2 ms-72 px-4 rounded-lg">
                             LOGIN
                         </Link>
-                        <Link href="/buy" className="bg-Amarelo w-44 px-0 rounded-full hover:text-blue-700 text-black text-xl text-center font-bold py-2">
+                        <Link href="/cadastro" className="bg-Amarelo w-44 px-0 rounded-full hover:text-blue-700 text-black text-xl text-center font-bold py-2">
                             Cadastre-se
                         </Link>
                     </div>
@@ -33,8 +33,8 @@ export function Header() {
                 <div className="max-w-screen-xl mx-auto flex items-center justify-between">
                     <ul className="flex justify-center space-x-8 py-4">
                         <li><Link href="/" className="text-gray-700 hover:text-blue-700 font-bold">Principal</Link></li>
-                        <li><Link href="/about" className="text-gray-700 hover:text-blue-700 font-bold">Suporte</Link></li>
-                        <li><Link href="/pages" className="text-gray-700 hover:text-blue-700 font-bold">Serviços</Link></li>
+                        <li><Link href="/" className="text-gray-700 hover:text-blue-700 font-bold">Suporte</Link></li>
+                        <li><Link href="/servico" className="text-gray-700 hover:text-blue-700 font-bold">Serviços</Link></li>
                     </ul>
                     
                     <form className="max-w-xl container rounded-full">
