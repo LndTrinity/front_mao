@@ -10,7 +10,13 @@ const config: Config = {
     extend: {
       colors: {
         AzulForte: '#084A83',
-        Amarelo:"#F9DA75"
+        AzulMaisForte:"#183A5D",
+        Amarelo:"#F9DA75",
+        AzulHr:"#264462",
+        CinzaBg:"#F8F8F8",
+        CinzaTexto:"#4B5563",
+        Azul2:"#374151",
+        Cinza2: "#1F2937"
       },
       backgroundImage: {
         "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
