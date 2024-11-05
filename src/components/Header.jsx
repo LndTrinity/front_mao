@@ -34,7 +34,7 @@ export function Header() {
                     <ul className="flex justify-center space-x-8 py-4">
                         <li><Link href="/" className="text-gray-700 hover:text-blue-700 font-bold">Principal</Link></li>
                         <li><Link href="/" className="text-gray-700 hover:text-blue-700 font-bold">Suporte</Link></li>
-                        <li><Link href="/servico" className="text-gray-700 hover:text-blue-700 font-bold">Serviços</Link></li>
+                        <li><Link href="/servicos" className="text-gray-700 hover:text-blue-700 font-bold">Serviços</Link></li>
                     </ul>
                     
                     <form className="max-w-xl container rounded-full">
