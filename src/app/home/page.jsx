@@ -66,7 +66,7 @@ export function Home() {
             <img
               src="./icones/icone_faxina.svg"
               alt="Icone de Limpeza"
-              className="w-16 h-16 mx-auto mb-4"
+              className="w-12 h-12 mx-auto mb-4"
             />
           </div>
 
@@ -79,7 +79,7 @@ export function Home() {
             <img
               src="./icones/icone_pintura.svg"
               alt="Icone de Pintura"
-              className="w-16 h-16 mx-auto mb-4"
+              className="w-12 h-12 mx-auto mb-4"
             />
           </div>
 
@@ -94,7 +94,7 @@ export function Home() {
             <img
               src="./icones/icone_eletrecista.svg"
               alt="Icone de eletrecista"
-              className="w-16 h-16 mx-auto mb-4"
+              className="w-12 h-12 mx-auto mb-4"
             />
           </div>
 
@@ -109,7 +109,7 @@ export function Home() {
             <img
               src="./icones/icone_martelo.svg"
               alt="Icone de Manutenção"
-              className="w-16 h-16 mx-auto mb-4"
+              className="w-12 h-12 mx-auto mb-4"
             />
           </div>
 
@@ -122,7 +122,7 @@ export function Home() {
             <img
               src="./icones/icone_pa.svg"
               alt="Icone de Manutenção"
-              className="w-16 h-16 mx-auto mb-4"
+              className="w-14 h-14 mx-auto mb-4"
             />
           </div>
 
@@ -137,7 +137,7 @@ export function Home() {
             <img
               src="./icones/icone_ferramentas.svg"
               alt="Icone de Manutenção"
-              className="w-16 h-16 mx-auto mb-4"
+              className="w-12 h-12 mx-auto mb-4"
             />
           </div>
 
