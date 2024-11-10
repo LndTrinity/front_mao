@@ -1,8 +1,10 @@
 import React from "react";
 import Link from "next/link"; // Uso de Link do Next.js
+import { Header } from "@/components/Header";
 
 export function Home() {
   return (
+  
     <main>
       {/* Seção Hero */}
       <section className="bg-blue-900 h-fit  text-white text-center ">
@@ -155,5 +157,6 @@ export function Home() {
         </div>
       </section>
     </main>
+   
   );
 }

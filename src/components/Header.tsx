@@ -1,6 +1,31 @@
+"use client"
 import Link from "next/link";
+import { PropostaI } from "@/utils/types/proposta";
+import { useForm } from "react-hook-form";
+import { useRouter } from 'next/navigation';
+import { useState } from 'react';
+import { toast } from "sonner";
+
+
+
+type inputs = {
+    termo: string
+}
+type InputPesquisaProps = {
+    setCarros: React.Dispatch<React.SetStateAction<PropostaI[]>>
+   
+}
 
 export function Header() {
+    const {register, handleSubmit, reset} = useForm<inputs>()
+  
+    const router = useRouter()
+
+    async function enviaPesquisa(data: inputs) {
+        router.push(`/pesquisa?termo=${data.termo}`);
+
+    }
+
     return (
         <header>
             {/* Main Header */}
@@ -37,7 +62,8 @@ export function Header() {
                         <li><Link href="/servicos" className="text-gray-700 hover:text-blue-700 font-bold">Serviços</Link></li>
                     </ul>
                     
-                    <form className="max-w-xl container rounded-full">
+                    <form className="max-w-xl container rounded-full"
+                        onSubmit={handleSubmit(enviaPesquisa)}>
                         <label htmlFor="default-search" className="mb-2 text-sm font-medium text-gray-900 sr-only dark:text-white">Search</label>
                         <div className="relative">
                             <input
@@ -46,6 +72,7 @@ export function Header() {
                                 className="block w-full max-h-10 py-4 rounded-full ps-10 text-sm text-gray-900 border border-gray-300 bg-white placeholder-gray-400 focus:ring-blue-500 focus:border-blue-500"
                                 placeholder="Pesquisar"
                                 required
+                                {...register("termo")}
                             />
                             <button type="submit" className="absolute right-0 top-0 h-full px-4 bg-transparent border-l border-gray-300 rounded-r-full focus:ring-4 focus:outline-none focus:ring-blue-300">
                                 <svg className="w-4 h-4 text-gray-500" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 20 20">
