@@ -5,6 +5,7 @@ import { useForm } from "react-hook-form";
 import { useRouter } from 'next/navigation';
 import { useState } from 'react';
 import { toast } from "sonner";
+import { useClienteStore } from "@/context/cliente";
 
 
 
@@ -18,6 +19,16 @@ type InputPesquisaProps = {
 
 export function Header() {
     const {register, handleSubmit, reset} = useForm<inputs>()
+    const { cliente, deslogaCliente } = useClienteStore()
+
+    function sairCliente(){
+        deslogaCliente()
+
+        if(localStorage.getItem("client_key")){
+            localStorage.removeItem("client_key")
+        }
+        router.push("/login")
+    }
   
     const router = useRouter()
 
@@ -25,6 +36,7 @@ export function Header() {
         router.push(`/pesquisa?termo=${data.termo}`);
 
     }
+
 
     return (
         <header>
@@ -36,8 +48,27 @@ export function Header() {
                         <img src="./icones/logo_azul_e_cinzas_e_nome.svg" className="" alt="logo" />
                         <span className="text-3xl font-semibold whitespace-nowrap dark:text-black"></span>
                     </Link>
+                    
 
                     {/* Login, Cadastro e WhatsApp */}
+                    { cliente.nome ? 
+                      <>
+
+                      <div className="flex items-center space-x-6 rtl:space-x-reverse">
+                      <span className="text-AzulBase text-lg font-bold hover:underline">
+                          {cliente.nome}
+                        </span>
+                        <Link href="/perfil" className="font-bold text-AzulBase dark:text-blue-500 hover:underline">
+                          Meu Perfil
+                        </Link>
+          
+                        <span className="cursor-pointer font-bold text-AzulBase dark:text-blue-500 hover:underline"
+                          onClick={sairCliente}>
+                          Sair
+                        </span>
+                      </div>
+                    </>
+                    :
                     <div className="flex max-w-xl justify-between container items-center">
                         <Link href="/login" className="bg-white-400 text-black font-bold text-base hover:text-blue-700 py-2 ms-72 px-4 rounded-lg">
                             LOGIN
@@ -45,7 +76,7 @@ export function Header() {
                         <Link href="/cadastro" className="bg-Amarelo w-44 px-0 rounded-full hover:text-blue-700 text-black text-xl text-center font-bold py-2">
                             Cadastre-se
                         </Link>
-                    </div>
+                    </div> }
                 </div>
             </nav>
 

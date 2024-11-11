@@ -1,5 +1,6 @@
 export interface ClienteI {
     id: string
     nome: string
-    email: string
+    email: string, 
+    token: string
   }

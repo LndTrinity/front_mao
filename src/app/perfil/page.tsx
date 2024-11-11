@@ -1,8 +1,42 @@
+"use client"
 import React from "react";
 import Image from "next/image";
 import Link from "next/link";
+import { useClienteStore } from "@/context/cliente";
+import { useEffect } from "react";
+
+
 
 export default function perfil() {
+
+  const { cliente } = useClienteStore()
+  
+
+  useEffect(() => {
+
+    async function buscaCliente() {
+
+      const response = await fetch(`${process.env.NEXT_PUBLIC_URL_API}/usuarios/${cliente.id}`,{
+        headers: {
+          "Content-Type": "application/json",
+          "Authorization": `Bearer ${cliente.token}` 
+        },
+        method: "GET",
+      })
+      console.log(response.status)
+      if (response.status == 200) {
+        const dados = await response.json()
+        
+      }
+    }
+    
+    buscaCliente()
+  }, []);
+
+
+
+  
+
   return (
     <main>
       <section className="max-w-screen-xl mt-20 mx-auto grid grid-cols-[50%_50%] ">
@@ -12,26 +46,26 @@ export default function perfil() {
             <form className="max-w-full flex flex-col justify-between max-h-full flex-wrap ms-5 ">
               <h1 className="font-bold mb-2 text-white mt-5 text-xl">Informações da conta</h1>
               <div className="mb-5 max-w-[50%]">
-                <label for="name" class="block mb-2 text-sm font-medium text-white dark:text-white">Nome</label>
+                <label htmlFor="name" className="block mb-2 text-sm font-medium text-white dark:text-white">{cliente.nome}</label>
                 <input type="name" id="name" className="bg-Azul2 border border-Azul2  text-sm rounded-lg focus:ring-Azul2 focus:border-Azul2 block w-full p-2.5 " placeholder="Seu nome" required />
               </div>
               <div className="mb-5 max-w-[50%]">
-                <label for="email" class="block mb-2 text-sm font-medium text-white dark:text-white">Seu email</label>
+                <label htmlFor="email" className="block mb-2 text-sm font-medium text-white dark:text-white">{}</label>
                 <input type="email" id="email" className="bg-Azul2 border border-Azul2  text-sm rounded-lg focus:ring-Azul2 focus:border-Azul2 block w-full p-2.5 " placeholder="seu_email@exemplo.com" required />
               </div>
               <div className="mb-5 max-w-[50%]">
-                <label for="telefone" class="block mb-2 text-sm font-medium text-white dark:text-white">Telefone</label>
+                <label htmlFor="telefone" className="block mb-2 text-sm font-medium text-white dark:text-white">{}</label>
                 <input type="telefone" id="telefone" className="bg-Azul2 border border-Azul2  text-sm rounded-lg focus:ring-Azul2 focus:border-Azul2 block w-full p-2.5 " placeholder="(00) 00000-0000" required />
               </div>
               <div className="mb-5 max-w-[50%]">
-                <label for="nascimento" class="block mb-2 text-sm font-medium text-white dark:text-white">Data de Nascimento</label>
+                <label htmlFor="nascimento" className="block mb-2 text-sm font-medium text-white dark:text-white">{}</label>
                 <input type="nascimento" id="nascimento" className="bg-Azul2 border border-Azul2  text-sm rounded-lg focus:ring-Azul2 focus:border-Azul2 block w-full p-2.5 " placeholder="06/03/1990" required />
               </div>
 
               <div className="max-w-[45%] flex flex-col justify-between py-5  h-full ">
                 <div>
-                  <label for="desc" className="block mb-2 text-sm font-medium text-white dark:text-white">Descrição</label>
-                  <textarea id="desc" rows="6" className="bg-Azul2 border border-Azul2  text-sm rounded-lg focus:ring-Azul2 focus:border-Azul2 block w-full p-2.5 " placeholder="Diga algo sobre você aos seus clientes..."></textarea>
+                  <label htmlFor="desc" className="block mb-2 text-sm font-medium text-white dark:text-white">{}</label>
+                  <textarea id="desc" rows={6} className="bg-Azul2 border border-Azul2  text-sm rounded-lg focus:ring-Azul2 focus:border-Azul2 block w-full p-2.5 " placeholder="Diga algo sobre você aos seus clientes..."></textarea>
                 </div>
                 <button type="submit" className="text-black font-bold mt-5 min-w-[50%] mx-auto bg-Amarelo hover:bg-AzulMaisForte focus:ring-4 focus:outline-none focus:ring-blue-300  rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Salvar</button>
               </div>
@@ -55,7 +89,7 @@ export default function perfil() {
                 <img className="rounded-full w-36  h-36 " src="/img181.jpg" alt="" />
               </div>
               <div className="flex flex-col mt-2 justify-around items-end h-36 me-5 w-fit">
-                <h1 className="text-white text-4xl font-bold">Maria Helena</h1>
+                <h1 className="text-white text-4xl font-bold">{cliente.nome}</h1>
                 <div className="flex h-7 w-fit">
                   <img className="mx-1 w-10 h-10" src="/icones/icone_star40px.svg" alt="" />
                   <img className="mx-1 w-10 h-10" src="/icones/icone_star40px.svg" alt="" />
