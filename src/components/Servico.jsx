@@ -1,22 +1,20 @@
 import Link from "next/link";
-import Image from "next/image";
 
 export function Main() {
   return (
-    <main className="w-full h-fit">
-      <div className="w-full-lg mt-20 mx-auto grid grid-cols-[65%_35%] ">
+    <main className="w-screen h-fit">
+      <div className="max-w-screen-lg mt-20 mx-auto grid grid-cols-[65%_35%] ">
         <div className="flex flex-col justify-evenly min-h-[100vh]  ">
           <div className="max-w-[90%] mx-auto h-fit rounded-3xl">
             {" "}
             <h1 className="text-4xl font-bold text-gray-900 mb-4">
+              {" "}
               Joâo Silva - Encanador
-            </h1>
-            <Image
+            </h1>{" "}
+            <img
               className="max-w-full mx-auto h-auto rounded-3xl"
-              src="/encanador.png"
+              src="./encanador.png"
               alt=""
-              width={500}
-              height={500} 
             />
           </div>
           <div className="h-fit max-w-[90%] mx-auto flex flex-col my-8 justify-evenly">

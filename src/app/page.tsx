@@ -1,8 +1,15 @@
+"use client"
+import { useState } from "react";
 import {Home} from "./home/page";
-// import { useClienteStore } from "@/context/cliente";
+import { useClienteStore } from "@/context/cliente";
+import  SocialMediaLinks from "@/components/SocialMediaLinks"
+import { useEffect } from "react";
+
+
+
 
 export default function Page() {
-  // const {logaCliente} = useClienteStore()
+  const {logaCliente} = useClienteStore()
 
   // useEffect(() => {
 
@@ -10,7 +17,7 @@ export default function Page() {
   //     const response = await fetch(`${process.env.NEXT_PUBLIC_URL_API}/usuarios/${idCliente}`,{
   //       headers: {
   //         "Content-Type": "application/json",
-  //         "Authorization": `Bearer ${tokenCliente}`
+  //         "Authorization": `Bearer ${tokenCliente}` 
   //       },
   //       method: "GET",
   //     })
@@ -23,16 +30,21 @@ export default function Page() {
   //   if (localStorage.getItem("client_key")) {
   //     const idClienteLocal = localStorage.getItem("client_key") as string
   //     const tokenLocal = localStorage.getItem("token_key") as string
-
+      
   //     buscaCliente(idClienteLocal, tokenLocal)
   //     console.log("client_key:", localStorage.getItem("client_key"));
   //   }
-
+    
   // }, []);
 
+ 
+ 
   return (
     <main>
+      
       <Home />
+      <SocialMediaLinks/>
+     
     </main>
   );
 }

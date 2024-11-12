@@ -4,7 +4,7 @@ import SocialMediaLinks from "@/components/SocialMediaLinks"; // Importando o co
 export default function Home() {
   return (
     <main>
-      <div className="w-full h-screen">
+      <div className="w-screen h-screen">
         <ServicoCard /> {/* Usando o componente ServicoCard */}
         <SocialMediaLinks /> {/* Usando o componente SocialMediaLinks */}
       </div>

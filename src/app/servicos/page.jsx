@@ -1,18 +1,16 @@
 import Link from "next/link";
-import Image from "next/image";
 
 export default function servicos() {
   return (
-    <main className="w-full h-fit pb-10">
-      <section className="w-full mt-20 mx-auto grid grid-cols-[65%_35%] ">
+    <main className="w-screen h-fit pb-10">
+      <section className="max-w-screen-lg mt-20 mx-auto grid grid-cols-[65%_35%] ">
         <div className="flex flex-col justify-between min-h-[100vh]  ">
           <div className="max-w-[90%] mx-auto h-fit rounded-3xl">
-            <Image
+
+            <img
               className="max-w-full mx-auto h-auto rounded-3xl"
-              src="/encanador.png"
+              src="./encanador.png"
               alt=""
-              width={500}
-              height={500}
             />
             <p className="pt-14">
               João Silva é um profissional dedicado com mais de 10 anos de
@@ -53,17 +51,13 @@ export default function servicos() {
             </ul>
             {/* </div> */}
           </div>
+
         </div>
+
 
         <div className="col-start-2 h-fit">
           <div className="rounded-xl w-[90%] flex flex-col justify-evenly items-center  mx-auto shadow h-96">
-            <Image
-              className="rounded-full max-w-20"
-              src="/img181.jpg"
-              alt=""
-              width={80}
-              height={80}
-            />
+            <img className="rounded-full max-w-20" src="./img181.jpg" alt="" />
 
             <div className=" container flex flex-col justify-between max-w-fit items-center max-h-20">
               <h1 className="text-4xl font-semibold text-AzulMaisForte mb-2">
@@ -73,39 +67,27 @@ export default function servicos() {
             </div>
             <div className="w-[60%] p-1 h-fit flex items-center justify-evenly">
               <a href="">
-                <Image
+                <img
                   className="w-8 h-8"
-                  src="/icones/icone_facebook.svg"
+                  src="./icones/icone_facebook.svg"
                   alt=""
-                  width={32}
-                  height={32}
                 />
               </a>
               <a href="">
-                <Image
+                <img className="w-8" src="./icones/icone_youtube.svg" alt="" />
+              </a>
+              <a href="">
+                <img
                   className="w-8"
-                  src="/icones/icone_youtube.svg"
+                  src="./icones/icone_instagram.svg"
                   alt=""
-                  width={32}
-                  height={32}
                 />
               </a>
               <a href="">
-                <Image
+                <img
                   className="w-8"
-                  src="/icones/icone_instagram.svg"
+                  src="./icones/icone_twitter.svg"
                   alt=""
-                  width={32}
-                  height={32}
-                />
-              </a>
-              <a href="">
-                <Image
-                  className="w-8"
-                  src="/icones/icone_twitter.svg"
-                  alt=""
-                  width={32}
-                  height={32}
                 />
               </a>
             </div>
@@ -123,84 +105,52 @@ export default function servicos() {
               <div className=" h-14 w-[90%] flex  flex-col justify-center text-center  bg-Amarelo rounded-full">
                 {" "}
                 <h2 className="font-bold">Avaliação Geral</h2>
+
               </div>
               {/* avaliações estrelas */}
               <div className=" flex flex-col items-center">
                 <div className="flex h-7 w-fit">
-                  <Image
-                    className="mx-1"
-                    src="/icones/icone_star.png"
-                    alt=""
-                    width={28}
-                    height={28}
-                  />
-                  <Image
-                    className="mx-1"
-                    src="/icones/icone_star.png"
-                    alt=""
-                    width={28}
-                    height={28}
-                  />
-                  <Image
-                    className="mx-1"
-                    src="/icones/icone_star.png"
-                    alt=""
-                    width={28}
-                    height={28}
-                  />
-                  <Image
-                    className="mx-1"
-                    src="/icones/icone_star.png"
-                    alt=""
-                    width={28}
-                    height={28}
-                  />
-                  <Image
-                    className="mx-1"
-                    src="/icones/icone_halfstar.png"
-                    alt=""
-                    width={28}
-                    height={28}
-                  />
+                  <img className="mx-1" src="/icones/icone_star.png" alt="" />
+                  <img className="mx-1" src="/icones/icone_star.png" alt="" />
+                  <img className="mx-1" src="/icones/icone_star.png" alt="" />
+                  <img className="mx-1" src="/icones/icone_star.png" alt="" />
+                  <img className="mx-1" src="/icones/icone_halfstar.png" alt="" />
+
+
                 </div>
                 <div className="text-center text-white">
                   <p className="text-xs">4,5 de 5</p>
                   <p className="text-sm">50 avaliações</p>
+
                 </div>
               </div>
 
               <div className="flex  justify-between w-[90%]  ">
                 <div className="flex flex-col px-2 w-20 text-center items-center">
-                  <Image
+                  <img
                     className="max-w-9"
-                    src="/icones/icone_docu_check_branco.svg"
+                    src="./icones/icone_docu_check_branco.svg"
                     alt=""
-                    width={36}
-                    height={36}
                   />
                   <p className="text-[12px] text-white leading-relaxed">
                     Qualificações verificadas
                   </p>
                 </div>
                 <div className="flex flex-col text-center px-2 w-20 items-center">
-                  <Image
+                  <img
                     className="max-w-9"
-                    src="/icones/icone_50_branco.svg"
+                    src="./icones/icone_50_branco.svg"
                     alt=""
-                    width={36}
-                    height={36}
                   />
                   <p className="text-[12px] text-white leading-relaxed">
                     50 Serviços
                   </p>
                 </div>
                 <div className="flex flex-col text-center px-2 w-20 items-center">
-                  <Image
+                  <img
                     className="max-w-9"
-                    src="/icones/icone_perfil_branco.svg"
+                    src="./icones/icone_perfil_branco.svg"
                     alt=""
-                    width={36}
-                    height={36}
                   />
                   <p className="text-[12px] text-white leading-relaxed">
                     Perfil verificado
@@ -208,6 +158,7 @@ export default function servicos() {
                 </div>
               </div>
             </div>
+
           </div>
           <div className="rounded-xl w-[90%] flex flex-col bg-CinzaBg  justify-evenly items-center  mt-14 mx-auto shadow h-fit">
             <div className="w-[90%] flex justify-around flex-col h-fit items-center pt-2 pb-6">
@@ -229,210 +180,128 @@ export default function servicos() {
               >
                 Ver horários disponíveis
               </Link> */}
+
+
+
+
             </div>
+
           </div>
+
         </div>
       </section>
-      <section className="flex w-full items-center bg-CinzaBg mt-6 mx-auto h-fit flex-col">
+      <section className="flex max-w-screen-lg items-center bg-CinzaBg mt-6 mx-auto h-fit flex-col">
         <div className="flex w-24 my-5 h-5">
           <div className="w-5 h-[10px] mx-[2px] border-AzulMaisForte border-b-[1px]"></div>
-          <p className="text-sm  mx-[2px] font-semibold text-AzulMaisForte">
-            Galeria
-          </p>
+          <p className="text-sm  mx-[2px] font-semibold text-AzulMaisForte">Galeria</p>
         </div>
         <div className="text-center w-fit">
-          <h1 className="font-bold text-3xl">
-            Alguns trabalhos de Manuel Silva
-          </h1>
+          <h1 className="font-bold text-3xl">Alguns trabalhos de Manuel Silva</h1>
+
         </div>
         <div className="max-w-[90%] my-5 flex-wrap container mx-auto h-3/5 flex justify-evenly">
-          <Image
+          <img
             className="w-64 my-3 h-auto rounded-sm "
-            src="/casal.png"
+            src="./casal.png"
             alt=""
-            width={256}
-            height={256}
+          />{" "}
+          <img
+            className="w-64 my-3 h-auto rounded-sm "
+            src="./encanador_com_tubo.png"
+            alt=""
           />
-          <Image
+          <img
             className="w-64 my-3 h-auto rounded-sm "
-            src="/encanador_com_tubo.png"
+            src="./encanador_com_tubo.png"
             alt=""
-            width={256}
-            height={256}
           />
-          <Image
+          <img
             className="w-64 my-3 h-auto rounded-sm "
-            src="/encanador_com_tubo.png"
+            src="./encanador_com_tubo.png"
             alt=""
-            width={256}
-            height={256}
           />
-          <Image
+          <img
             className="w-64 my-3 h-auto rounded-sm "
-            src="/encanador_com_tubo.png"
+            src="./encanador_com_tubo.png"
             alt=""
-            width={256}
-            height={256}
           />
-          <Image
+          <img
             className="w-64 my-3 h-auto rounded-sm "
-            src="/encanador_com_tubo.png"
+            src="./encanador_com_tubo.png"
             alt=""
-            width={256}
-            height={256}
-          />
-          <Image
-            className="w-64 my-3 h-auto rounded-sm "
-            src="/encanador_com_tubo.png"
-            alt=""
-            width={256}
-            height={256}
           />
         </div>
       </section>
-      <section className="flex w-full items-center mt-6 mx-auto h-screen flex-col">
+      <section className="flex max-w-screen-lg items-center mt-6 mx-auto h-screen flex-col">
         <div className="flex w-24 my-5 h-5">
           <div className="w-5 h-[10px] mx-[2px] border-AzulMaisForte border-b-[1px]"></div>
-          <p className="text-sm  mx-[2px] font-semibold text-AzulMaisForte">
-            Avaliações
-          </p>
+          <p className="text-sm  mx-[2px] font-semibold text-AzulMaisForte">Avaliações</p>
         </div>
         <div className="text-center w-fit">
-          <h1 className="font-bold text-3xl">
-            Veja o que os clientes acham de Manuel!{" "}
-          </h1>
+          <h1 className="font-bold text-3xl">Veja o que os clientes acham de Manuel! </h1>
+
         </div>
         <div className="w-full flex flex-col h-fit justify-around ">
           <div className="rounded-xl w-[90%] my-1 flex flex-col justify-evenly items-start  mx-auto shadow h-64">
-            <div className="w-64 ms-5 flex h-28">
+            <div className="w-64 ms-5 flex h-28" >
               <div className="w-[40%] flex items-center justify-between flex-col">
-                <Image
-                  className="rounded-full max-w-20"
-                  src="/img181.jpg"
-                  alt=""
-                  width={80}
-                  height={80}
-                />
+                <img className="rounded-full max-w-20" src="./img181.jpg" alt="" />
                 <div className=" flex items-center">
-                  <Image
-                    className="w-4 mx-[2px] h-auto"
-                    src="/icones/icone_star.png"
-                    alt=""
-                    width={16}
-                    height={16}
-                  />
-                  <Image
-                    className="w-4 mx-[2px] h-auto"
-                    src="/icones/icone_star.png"
-                    alt=""
-                    width={16}
-                    height={16}
-                  />
-                  <Image
-                    className="w-4 mx-[2px] h-auto"
-                    src="/icones/icone_star.png"
-                    alt=""
-                    width={16}
-                    height={16}
-                  />
-                  <Image
-                    className="w-4 mx-[2px] h-auto"
-                    src="/icones/icone_star.png"
-                    alt=""
-                    width={16}
-                    height={16}
-                  />
+                  <img className="w-4 mx-[2px] h-auto" src="/icones/icone_star.png" alt="" />
+                  <img className="w-4 mx-[2px] h-auto" src="/icones/icone_star.png" alt="" />
+                  <img className="w-4 mx-[2px] h-auto" src="/icones/icone_star.png" alt="" />
+                  <img className="w-4 mx-[2px] h-auto" src="/icones/icone_star.png" alt="" />
+
                 </div>
               </div>
               <div className="w-[60%]">
                 <div className="h-[75%] flex flex-col items-center justify-between mt-8">
-                  <h1 className="font-semibold text-2xl text-CinzaTexto">
-                    Manoel Silva
-                  </h1>
+                  <h1 className="font-semibold text-2xl text-CinzaTexto">Manoel Silva</h1>
                   <p className="text-sm italic">Há 2 semanas</p>
                   <h2 className="font-bold text-base">Ótimo serviço</h2>
                 </div>
+
               </div>
             </div>
             <div>
               <div className="h-16 ms-5">
-                <p>
-                  Testei por 3 semanas antes de deixar minha avaliação e vou
-                  falar tudo o que gostaria de ter encontrado quando estava
-                  procurando para comprar:O reconhecimento de voz não é
-                  incrível, funciona 90% do tempo mas quando não funciona é bem
-                  frustrante porque, geralmente, falha quando estamos do lado
-                  dela.
-                </p>
+                <p>Testei por 3 semanas antes de deixar minha avaliação e vou falar tudo o que  gostaria de ter encontrado quando estava procurando para comprar:O  reconhecimento de voz não é incrível, funciona 90% do tempo mas quando  não funciona é bem frustrante porque, geralmente, falha quando estamos  do lado dela.</p>
               </div>
             </div>
           </div>
           <div className="rounded-xl w-[90%] my-2 flex flex-col justify-evenly items-start  mx-auto shadow h-64">
-            <div className="w-64 ms-5 flex h-28">
+            <div className="w-64 ms-5 flex h-28" >
               <div className="w-[40%] flex items-center justify-between flex-col">
-                <Image
-                  className="rounded-full max-w-20"
-                  src="/img181.jpg"
-                  alt=""
-                  width={80}
-                  height={80}
-                />
+                <img className="rounded-full max-w-20" src="./img181.jpg" alt="" />
                 <div className=" flex items-center">
-                  <Image
-                    className="w-4 mx-[2px] h-auto"
-                    src="/icones/icone_star.png"
-                    alt=""
-                    width={16}
-                    height={16}
-                  />
-                  <Image
-                    className="w-4 mx-[2px] h-auto"
-                    src="/icones/icone_star.png"
-                    alt=""
-                    width={16}
-                    height={16}
-                  />
-                  <Image
-                    className="w-4 mx-[2px] h-auto"
-                    src="/icones/icone_star.png"
-                    alt=""
-                    width={16}
-                    height={16}
-                  />
-                  <Image
-                    className="w-4 mx-[2px] h-auto"
-                    src="/icones/icone_star.png"
-                    alt=""
-                    width={16}
-                    height={16}
-                  />
+                  <img className="w-4 mx-[2px] h-auto" src="/icones/icone_star.png" alt="" />
+                  <img className="w-4 mx-[2px] h-auto" src="/icones/icone_star.png" alt="" />
+                  <img className="w-4 mx-[2px] h-auto" src="/icones/icone_star.png" alt="" />
+                  <img className="w-4 mx-[2px] h-auto" src="/icones/icone_star.png" alt="" />
+
                 </div>
               </div>
               <div className="w-[60%]">
                 <div className="h-[75%] flex flex-col items-center justify-between mt-8">
-                  <h1 className="font-semibold text-2xl text-CinzaTexto">
-                    Manoel Silva
-                  </h1>
+                  <h1 className="font-semibold text-2xl text-CinzaTexto">Manoel Silva</h1>
                   <p className="text-sm italic">Há 2 semanas</p>
                   <h2 className="font-bold text-base">Ótimo serviço</h2>
                 </div>
+
               </div>
             </div>
             <div>
               <div className="h-16 ms-5">
-                <p>
-                  Testei por 3 semanas antes de deixar minha avaliação e vou
-                  falar tudo o que gostaria de ter encontrado quando estava
-                  procurando para comprar:O reconhecimento de voz não é
-                  incrível, funciona 90% do tempo mas quando não funciona é bem
-                  frustrante porque, geralmente, falha quando estamos do lado
-                  dela.
-                </p>
+                <p>Testei por 3 semanas antes de deixar minha avaliação e vou falar tudo o que  gostaria de ter encontrado quando estava procurando para comprar:O  reconhecimento de voz não é incrível, funciona 90% do tempo mas quando  não funciona é bem frustrante porque, geralmente, falha quando estamos  do lado dela.</p>
               </div>
             </div>
           </div>
         </div>
+        
+        
+
       </section>
+
     </main>
   );
 }
