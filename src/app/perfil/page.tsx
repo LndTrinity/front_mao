@@ -39,7 +39,7 @@ export default function perfil() {
 
   return (
     <main>
-      <section className="max-w-screen-xl mt-20 mx-auto grid grid-cols-[50%_50%] ">
+      <section className="w-full mt-20 mx-auto grid grid-cols-[50%_50%] ">
         <div className=" min-h-[100vh]  ">
           <div className="w-full flex flex-col  mx-auto h-[430px] bg-Cinza2 shadow rounded-lg">
 

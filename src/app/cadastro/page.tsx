@@ -1,23 +1,22 @@
 "use client";
 import {useState} from "react";
-import { useForm } from "react-hook-form";
-import { useRouter } from "next/navigation"
+import {useForm} from "react-hook-form";
+import {useRouter} from "next/navigation";
 import axios from "axios";
 
 type inputs = {
-  termo: string
-}
+  termo: string;
+};
 export default function Cadastro() {
-  const {handleSubmit} = useForm<inputs>()
-  const router = useRouter()
+  const {handleSubmit} = useForm<inputs>();
+  const router = useRouter();
   const [email, setEmail] = useState("");
   const [senha, setSenha] = useState("");
   const [confirmarSenha, setConfirmarSenha] = useState("");
   const [NomeCompleto, setNomeCompleto] = useState("");
   const [tipo, setTipo] = useState("CLIENTE");
 
-   async function enviaDados (e:inputs) {
-    
+  async function enviaDados(e: inputs) {
     if (senha !== confirmarSenha) {
       alert("As senhas não coincidem.");
       return;
@@ -33,14 +32,14 @@ export default function Cadastro() {
         }
       );
       console.log("Usuário registrado:", response.data);
-      if (response.status == 201){
-        alert("Cadasto realizado com sucesso!")
-        router.push("/login")        
+      if (response.status == 201) {
+        alert("Cadasto realizado com sucesso!");
+        router.push("/login");
       }
     } catch (error) {
       console.error("Erro ao registrar usuário:", error);
     }
-  };
+  }
 
   return (
     <main className="bg-[url('../../public/imagem_profissional.png')] bg-no-repeat bg-right-bottom">
@@ -110,7 +109,7 @@ export default function Cadastro() {
             </div>
             <button
               type="submit"
-              className="w-full bg-Amarelo text-black p-2 rounded hover:bg-AzulForte transition-colors"
+              className="w-full bg-Amarelo text-black p-2 rounded hover:bg-yellow-400 transition-colors"
             >
               Registrar
             </button>

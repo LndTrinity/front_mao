@@ -50,7 +50,7 @@ export default function Pesquisa() {
   // }
   return (
     
-    <main className="flex mt-5 max-w-screen-xl mx-auto">
+    <main className="flex mt-5 w-full mx-auto">
       {/* Sidebar de Filtros */}
       <aside className="w-1/4 p-4 h-fit rounded-t-md bg-gray-100">
         <h2 className="text-lg font-bold mb-4">Filtros</h2>

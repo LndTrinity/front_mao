@@ -1,14 +1,14 @@
 import React from "react";
 import Link from "next/link"; // Uso de Link do Next.js
-import { Header } from "@/components/Header";
+// import { Header } from "@/components/Header";
+import Image from "next/image";
 
 export function Home() {
   return (
-  
     <main>
       {/* Seção Hero */}
       <section className="bg-blue-900 h-fit  text-white text-center ">
-        <div className="container flex justify-evenly items-center max-w-screen-xl mx-auto">
+        <div className="container flex justify-evenly items-center w-full mx-auto">
           <div className="">
             <h1 className="text-5xl font-bold mb-4">
               Conectando <span className="text-yellow-400">clientes</span> a
@@ -24,10 +24,11 @@ export function Home() {
           </div>
 
           <div className="">
-            <img
-              src="./imagem_profissional.png"
+            <Image
+              src="/imagem_profissional.png"
               alt="Profissional"
-              style={{width: "210px", height: "auto"}}
+              width={210}
+              height={200}
               className="object-cover"
             />
           </div>
@@ -37,7 +38,7 @@ export function Home() {
       </section>
 
       {/* Seção de Serviços */}
-      <section className="py-16 max-w-screen-lg mx-auto text-center">
+      <section className="py-16 w-full mx-auto text-center">
         <h2 className="text-4xl font-bold mb-8">
           Conheça os serviços que oferecemos a você!
         </h2>
@@ -52,10 +53,12 @@ export function Home() {
             <p className="text-gray-600 mb-4">
               Soluções rápidas para vazamentos e instalações
             </p>
-            <img
-              src="./icones/icone_encanamento.svg"
+            <Image
+              src="/icones/icone_encanamento.svg"
               alt="Icone de Encanamento"
-              className="w-12 h-12 mx-auto mb-4"
+              width={48}
+              height={48}
+              className="mx-auto mb-4"
             />
           </div>
 
@@ -65,10 +68,12 @@ export function Home() {
             <p className="text-gray-600 mb-4">
               Limpeza detalhada de residências e comércios
             </p>
-            <img
-              src="./icones/icone_faxina.svg"
+            <Image
+              src="/icones/icone_faxina.svg"
               alt="Icone de Limpeza"
-              className="w-12 h-12 mx-auto mb-4"
+              width={48}
+              height={48}
+              className="mx-auto mb-4"
             />
           </div>
 
@@ -78,10 +83,12 @@ export function Home() {
             <p className="text-gray-600 mb-4">
               Transforme seu ambiente com pintura profissional
             </p>
-            <img
-              src="./icones/icone_pintura.svg"
+            <Image
+              src="/icones/icone_pintura.svg"
               alt="Icone de Pintura"
-              className="w-12 h-12 mx-auto mb-4"
+              width={48}
+              height={48}
+              className="mx-auto mb-4"
             />
           </div>
 
@@ -93,10 +100,12 @@ export function Home() {
             <p className="text-gray-600 mb-4">
               Instalações e reparos elétricos seguros
             </p>
-            <img
-              src="./icones/icone_eletrecista.svg"
+            <Image
+              src="/icones/icone_eletrecista.svg"
               alt="Icone de eletrecista"
-              className="w-12 h-12 mx-auto mb-4"
+              width={48}
+              height={48}
+              className="mx-auto mb-4"
             />
           </div>
 
@@ -108,10 +117,12 @@ export function Home() {
             <p className="text-gray-600 mb-4">
               Móveis sob medida e reparos em madeira
             </p>
-            <img
-              src="./icones/icone_martelo.svg"
+            <Image
+              src="/icones/icone_martelo.svg"
               alt="Icone de Manutenção"
-              className="w-12 h-12 mx-auto mb-4"
+              width={48}
+              height={48}
+              className="mx-auto mb-4"
             />
           </div>
 
@@ -121,9 +132,11 @@ export function Home() {
               Serviço de Jardinagem
             </h3>
             <p className="text-gray-600 mb-4">Deixe seu jardim sempre bonito</p>
-            <img
-              src="./icones/icone_pa.svg"
+            <Image
+              src="/icones/icone_pa.svg"
               alt="Icone de Manutenção"
+              width={56}
+              height={56}
               className="w-14 h-14 mx-auto mb-4"
             />
           </div>
@@ -136,10 +149,12 @@ export function Home() {
             <p className="text-gray-600 mb-4">
               Reparos gerais e para sua casa ou empresa
             </p>
-            <img
-              src="./icones/icone_ferramentas.svg"
+            <Image
+              src="/icones/icone_ferramentas.svg"
               alt="Icone de Manutenção"
-              className="w-12 h-12 mx-auto mb-4"
+              width={48}
+              height={48}
+              className="mx-auto mb-4"
             />
           </div>
 
@@ -157,6 +172,5 @@ export function Home() {
         </div>
       </section>
     </main>
-   
   );
 }

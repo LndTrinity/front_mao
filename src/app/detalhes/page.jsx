@@ -7,7 +7,7 @@ export default function servicoDetalhes()  {
       <div className="relative bg-blue-900 py-24 flex justify-center items-center">
         <h1 className="text-white text-4xl font-bold">Entre em contato</h1>
       </div>
-      <div className="container mx-auto max-w-screen-lg py-16 px-4 grid md:grid-cols-2 gap-10">
+      <div className="container mx-auto w-full py-16 px-4 grid md:grid-cols-2 gap-10">
         <div>
           <h2 className="text-3xl font-semibold mb-6">
             João Silva Serviços de reforma residencial
